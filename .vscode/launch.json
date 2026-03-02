@@ -1,0 +1,68 @@
+{
+    // Gunakan IntelliSense untuk informasi tentang kemungkinan atribut.
+    // Arahkan kursor untuk melihat deskripsi atribut yang ada.
+    // Informasi lebih lanjut dapat ditemukan di sini: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "args": [
+                "task"
+            ],
+            "name": "Gulp task",
+            "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "Attach",
+            "port": 9229,
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+
+
+        {
+            "request": "launch",
+            "name": "Launch Program",
+            "type": "node",
+            "program": "${workspaceFolder}/main.ts",
+            "cwd": "${workspaceFolder}",
+            "env": {},
+            "runtimeExecutable": "deno",
+            "runtimeArgs": [
+                "run",
+                "--unstable",
+                "--inspect-brk",
+                "--allow-all"
+            ],
+            "attachSimplePort": 9229
+        }
+    ]
+}
